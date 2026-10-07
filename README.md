@@ -146,7 +146,19 @@ Replace the configured server address with the IP address of the machine running
 
 This is required when running the application on a physical Android device, as the device needs to be able to reach the backend over the local network.
 
-### 3. Install Client Dependencies
+### 3. Configure Environment Variables
+
+The client repository uses environment variables for external service configuration.
+
+Create a local `.env` file based on the provided environment variable template and add your own API key:
+
+```text
+EXPO_PUBLIC_IMGBB_API_KEY=your_imgbb_api_key_here
+```
+
+This API key is used to interact with **ImgBB** for image uploads.
+
+### 4. Install Client Dependencies
 
 Navigate to the client repository:
 
@@ -160,7 +172,7 @@ Install the dependencies:
 npm install
 ```
 
-### 4. Start the Expo Development Server
+### 5. Start the Expo Development Server
 
 Run:
 
