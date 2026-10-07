@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "calorie-counter-app",
+    "slug": "calorie-counter-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "supportsRtl": true,
+      "package": "com.takabayashi.caloriecounterapp"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-secure-store",
+      [
+        "@react-native-community/datetimepicker",
+        {
+          "android": {
+            "datePicker": {
+              "colorAccent": {
+                "light": "#f01ac2",
+                "dark": "#f01ac2"
+              },
+              "textColorPrimary": {
+                "light": "#f01ac2",
+                "dark": "#f01ac2"
+              }
+            },
+            "timePicker": {
+              "background": { "light": "#1c1d30", "dark": "#1c1d30" },
+              "numbersBackgroundColor": {
+                "light": "#1c1d30",
+                "dark": "#1c1d30"
+              }
+            }
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to be able to add food images."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
+    ]
+  }
+}
